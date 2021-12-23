@@ -2,4 +2,11 @@
     <string name="app_name">MadridistaApp</string>
     <string name="welcome">Welcome,</string>
     <string name="madridista">madridista</string>
+    <string name="hello">Hello there!</string>
+    <string name="signIn">Sign In to continue</string>
+    <string name="username_hint">Username</string>
+    <string name="password_hint">Password</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="enter">Enter</string>
+    <string name="new_user">New User? Sign Up</string>
 </resources>

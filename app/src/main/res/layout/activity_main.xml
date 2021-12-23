@@ -14,6 +14,7 @@
         android:layout_marginTop="50dp"
         android:contentDescription="@string/app_name"
         android:src="@drawable/ic_madridlogo"
+        android:transitionName="logo_image"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -26,6 +27,7 @@
         android:fontFamily="cursive"
         android:text="@string/welcome"
         android:textAlignment="center"
+        android:transitionName="logo_text"
         android:textColor="@color/blue"
         android:textSize="60sp"
         android:textStyle="bold"
