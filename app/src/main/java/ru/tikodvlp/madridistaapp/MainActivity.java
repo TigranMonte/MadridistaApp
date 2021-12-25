@@ -30,9 +30,9 @@ public class MainActivity extends AppCompatActivity {
 
         topAnimation = AnimationUtils.loadAnimation(this, R.anim.top_animation);
 
-        ivLogo = (ImageView) findViewById(R.id.ivLogo);
-        tvWelcome = (TextView) findViewById(R.id.tvWelcome);
-        tvMadridista = (TextView) findViewById(R.id.tvMadridista);
+        ivLogo = findViewById(R.id.ivLogo);
+        tvWelcome = findViewById(R.id.tvWelcome);
+        tvMadridista = findViewById(R.id.tvMadridista);
 
         ivLogo.setAnimation(topAnimation);
         tvWelcome.setAnimation(topAnimation);
@@ -49,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
                 ActivityOptions options = ActivityOptions.
                         makeSceneTransitionAnimation(MainActivity.this, pairs);
                 startActivity(intent, options.toBundle());
+                finish();
             }
         },SPLASH_SCREEN);
     }
