@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/white"
-    android:padding="20dp"
+    android:padding="15dp"
     tools:context=".SignUpActivity">
 
     <ImageView
@@ -23,7 +23,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/hello"
-        android:textSize="30sp"
+        android:textSize="25sp"
         android:textStyle="bold"
         android:fontFamily="sans-serif-medium"
         android:textColor="@color/blue"
@@ -33,7 +33,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/signUp"
-        android:textSize="18sp"
+        android:textSize="15sp"
         android:fontFamily="sans-serif"
         android:textColor="@color/blue"
         android:transitionName="sign"/>
@@ -41,10 +41,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp">
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp">
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/enter_full_name"
+            android:id="@+id/reg_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/full_name"
@@ -55,7 +55,7 @@
                 android:inputType="text"/>
         </com.google.android.material.textfield.TextInputLayout>
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/enter_username"
+            android:id="@+id/reg_username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/username"
@@ -70,7 +70,7 @@
                 android:transitionName="user_tran"/>
         </com.google.android.material.textfield.TextInputLayout>
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/enter_email"
+            android:id="@+id/reg_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/email"
@@ -81,7 +81,7 @@
                 android:inputType="textEmailAddress"/>
         </com.google.android.material.textfield.TextInputLayout>
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/enter_password"
+            android:id="@+id/reg_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/password_hint"
@@ -94,6 +94,17 @@
                 android:inputType="textPassword"
                 android:transitionName="pass_tran"/>
         </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/reg_phoneNum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/phone_hint"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone"/>
+        </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
     <Button
         android:id="@+id/btnEnter"
@@ -103,6 +114,7 @@
         android:backgroundTint="@color/blue"
         android:transitionName="enter_tran"/>
     <Button
+        android:id="@+id/btnToLogIn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/already"
