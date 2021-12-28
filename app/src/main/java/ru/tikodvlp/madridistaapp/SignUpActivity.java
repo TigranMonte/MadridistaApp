@@ -14,7 +14,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class SignUpActivity extends AppCompatActivity {
 
-    TextInputLayout reg_name, reg_username, reg_email, reg_password, reg_phoneNum;
+    TextInputLayout regName, regUsername, regEmail, regPassword, regPhoneNum;
     Button btnEnter, btnToLogIn;
 
     FirebaseDatabase rootNode;
@@ -26,31 +26,111 @@ public class SignUpActivity extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_sign_up);
 
-        reg_name = findViewById(R.id.reg_name);
-        reg_username = findViewById(R.id.reg_username);
-        reg_email = findViewById(R.id.reg_email);
-        reg_password = findViewById(R.id.reg_password);
-        reg_phoneNum = findViewById(R.id.reg_phoneNum);
+        regName = findViewById(R.id.reg_name);
+        regUsername = findViewById(R.id.reg_username);
+        regEmail = findViewById(R.id.reg_email);
+        regPassword = findViewById(R.id.reg_password);
+        regPhoneNum = findViewById(R.id.reg_phoneNum);
         btnEnter = findViewById(R.id.btnEnter);
         btnToLogIn = findViewById(R.id.btnToLogIn);
 
-        // save data in FB on click
-        btnEnter.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                rootNode = FirebaseDatabase.getInstance();
-                reference = rootNode.getReference("users");
+        rootNode = FirebaseDatabase.getInstance();
+        reference = rootNode.getReference("users");
 
-                // get all the values
-                String name = reg_name.getEditText().getText().toString();
-                String username = reg_username.getEditText().getText().toString();
-                String email = reg_email.getEditText().getText().toString();
-                String password = reg_password.getEditText().getText().toString();
-                String phoneNum = reg_phoneNum.getEditText().getText().toString();
+    }
 
-                UserHelperClass userHelperClass = new UserHelperClass(name, username, email, password, phoneNum);
-                reference.child(phoneNum).setValue(userHelperClass);
-            }
-        });
+    private Boolean validateName(){
+        String val = regName.getEditText().getText().toString();
+        if (val.isEmpty()) {
+            regName.setError("Field cannot be empty");
+            return false;
+        } else {
+            regName.setError(null);
+            return true;
+        }
+    }
+    private Boolean validateUsername() {
+        String val = regUsername.getEditText().getText().toString();
+        String noWhiteSpace = "\\A\\w{4,20}\\z";
+
+        if (val.isEmpty()) {
+            regUsername.setError("Field cannot be empty");
+            return false;
+        } else if (val.length() >= 15) {
+            regUsername.setError("Username too long");
+            return false;
+        } else if (!val.matches(noWhiteSpace)) {
+            regUsername.setError("White Spaces are not allowed");
+            return false;
+        } else {
+            regUsername.setError(null);
+            regUsername.setErrorEnabled(false);
+            return true;
+        }
+    }
+    private Boolean validatePassword() {
+        String val = regPassword.getEditText().getText().toString();
+        String passwordVal = "^" +
+                "(?=.*[0-9])" +         //at least 1 digit
+                //"(?=.*[a-z])" +         //at least 1 lower case letter
+                //"(?=.*[A-Z])" +         //at least 1 upper case letter
+                "(?=.*[a-zA-Z])" +      //any letter
+                //"(?=.*[@#$%^&+=])" +    //at least 1 special character
+                "(?=\\S+$)" +           //no white spaces
+                ".{4,}" +               //at least 4 characters
+                "$";
+
+        if (val.isEmpty()) {
+            regPassword.setError("Field cannot be empty");
+            return false;
+        } else if (!val.matches(passwordVal)) {
+            regPassword.setError("Password is too weak");
+            return false;
+        } else {
+            regPassword.setError(null);
+            regPassword.setErrorEnabled(false);
+            return true;
+        }
+    }
+    private Boolean validateEmail(){
+        String val = regEmail.getEditText().getText().toString();
+        String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
+        if (val.isEmpty()) {
+            regName.setError("Field cannot be empty");
+            return false;
+        } else if (!val.matches(emailPattern)) {
+            regEmail.setError("Invalid email address");
+            return false;
+        }
+        else {
+            regName.setError(null);
+            return true;
+        }
+    }
+    private Boolean validatePhone(){
+        String val = regPhoneNum.getEditText().getText().toString();
+        if (val.isEmpty()) {
+            regPhoneNum.setError("Field cannot be empty");
+            return false;
+        } else {
+            regPhoneNum.setError(null);
+            return true;
+        }
+    }
+
+    // save data in FB on click
+    public void registerUser(View view){
+
+        if(!validateName() |!validatePassword() | !validatePhone() | !validateEmail() | !validateUsername()) {
+            return;
+        }
+        String name = regName.getEditText().getText().toString();
+        String username = regUsername.getEditText().getText().toString();
+        String email = regEmail.getEditText().getText().toString();
+        String password = regPassword.getEditText().getText().toString();
+        String phoneNum = regPhoneNum.getEditText().getText().toString();
+
+        UserHelperClass userHelperClass = new UserHelperClass(name, username, email, password, phoneNum);
+        reference.child(username).setValue(userHelperClass);
     }
 }
