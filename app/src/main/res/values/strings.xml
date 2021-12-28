@@ -16,5 +16,11 @@
     <string name="username">Username</string>
     <string name="email">Email</string>
     <string name="go">GO</string>
+    <string name="sergio">Sergio Vasquez</string>
+    <string name="sergio_user">vasquez10</string>
     <string name="already">Already have an account? LogIn</string>
+    <string name="wallet">123$</string>
+    <string name="balance">Balance</string>
+    <string name="booking">Booking</string>
+    <string name="update">Update</string>
 </resources>
