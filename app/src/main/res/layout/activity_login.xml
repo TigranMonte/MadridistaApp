@@ -89,6 +89,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/enter"
+            android:onClick="loginUser"
             android:backgroundTint="@color/blue"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
@@ -101,10 +102,18 @@
             android:textColor="@color/blue"
             android:textStyle="bold"
             android:text="@string/new_user"
+            android:onClick="callSignUpScreen"
             android:layout_gravity="end"
             android:elevation="0dp"
             android:layout_margin="5dp"
             android:transitionName="sign_tran"/>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="15dp">
+        </ProgressBar>
 
     </LinearLayout>
 </LinearLayout>

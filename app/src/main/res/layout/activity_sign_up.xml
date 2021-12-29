@@ -130,7 +130,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="@color/blue"
             android:onClick="registerUser"
-            android:text="@string/enter"
+            android:text="@string/sign_up_reg"
             android:transitionName="enter_tran" />
 
         <Button
@@ -139,6 +139,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="@color/blue"
             android:text="@string/already"
+            android:onClick="callLoginActivity"
             android:textSize="15sp"
             android:transitionName="sign_tran" />
     </LinearLayout>
