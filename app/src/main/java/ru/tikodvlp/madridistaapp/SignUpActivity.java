@@ -121,7 +121,6 @@ public class SignUpActivity extends AppCompatActivity {
 
     // save data in FB on click
     public void registerUser(View view){
-
         if(!validateName() |!validatePassword() | !validatePhone() | !validateEmail() | !validateUsername()) {
             return;
         }
@@ -137,7 +136,6 @@ public class SignUpActivity extends AppCompatActivity {
         Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
         startActivity(intent);
     }
-
     public void callLoginActivity(View view) {
         Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
         startActivity(intent);
