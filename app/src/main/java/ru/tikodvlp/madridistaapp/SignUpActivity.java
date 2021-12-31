@@ -93,6 +93,7 @@ public class SignUpActivity extends AppCompatActivity {
             return true;
         }
     }
+
     private Boolean validateEmail(){
         String val = regEmail.getEditText().getText().toString();
         String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
@@ -108,6 +109,7 @@ public class SignUpActivity extends AppCompatActivity {
             return true;
         }
     }
+
     private Boolean validatePhone(){
         String val = regPhoneNum.getEditText().getText().toString();
         if (val.isEmpty()) {
@@ -118,7 +120,6 @@ public class SignUpActivity extends AppCompatActivity {
             return true;
         }
     }
-
     // save data in FB on click
     public void registerUser(View view){
         if(!validateName() |!validatePassword() | !validatePhone() | !validateEmail() | !validateUsername()) {
@@ -136,6 +137,7 @@ public class SignUpActivity extends AppCompatActivity {
         Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
         startActivity(intent);
     }
+
     public void callLoginActivity(View view) {
         Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
         startActivity(intent);
