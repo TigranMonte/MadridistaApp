@@ -45,7 +45,6 @@ public class LoginActivity extends AppCompatActivity {
         password = findViewById(R.id.password);
         progressBar = findViewById(R.id.progressBar);
         progressBar.setVisibility(View.GONE);
-
     }
 
     private Boolean validateUsername() {
@@ -60,6 +59,7 @@ public class LoginActivity extends AppCompatActivity {
                 return true;
             }
         }
+
     private Boolean validatePassword() {
             String val = password.getEditText().getText().toString();
 

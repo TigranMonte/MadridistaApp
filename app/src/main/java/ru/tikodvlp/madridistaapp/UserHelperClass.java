@@ -11,6 +11,7 @@ public class UserHelperClass {
         this.password = password;
         this.phoneNum = phoneNum;
     }
+
     public UserHelperClass() {
     }
 

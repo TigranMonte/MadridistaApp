@@ -69,6 +69,7 @@ public class SignUpActivity extends AppCompatActivity {
             return true;
         }
     }
+
     private Boolean validatePassword() {
         String val = regPassword.getEditText().getText().toString();
         String passwordVal = "^" +
@@ -120,6 +121,7 @@ public class SignUpActivity extends AppCompatActivity {
             return true;
         }
     }
+
     // save data in FB on click
     public void registerUser(View view){
         if(!validateName() |!validatePassword() | !validatePhone() | !validateEmail() | !validateUsername()) {
