@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="15dp"
+    android:orientation="vertical"
+    tools:context=".VerifyPhoneNumber">
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_madridlogo"/>
+
+    <TextView
+        android:id="@+id/verify_number_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/verify_num"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="@color/blue"/>
+
+    <TextView
+        android:id="@+id/enter_verify_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:text="@string/enter_verify_num"
+        android:textSize="15sp"
+        android:paddingEnd="15dp"
+        android:textColor="@color/blue"
+        android:textStyle="normal"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:orientation="vertical"
+        android:padding="50dp">
+
+        <EditText
+            android:id="@+id/entered_otp_by_user"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:hint="@string/verify_hint"/>
+        <Button
+            android:id="@+id/verify_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/blue"
+            android:text="Verify"/>
+        <ProgressBar
+            android:id="@+id/progress_bar_verify"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+</LinearLayout>

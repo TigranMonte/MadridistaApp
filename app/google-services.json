@@ -1,10 +1,40 @@
 {
   "project_info": {
     "project_number": "889648620534",
+    "firebase_url": "https://madridistaapp-93ecf-default-rtdb.firebaseio.com",
     "project_id": "madridistaapp-93ecf",
     "storage_bucket": "madridistaapp-93ecf.appspot.com"
   },
   "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:889648620534:android:6171ac495881a9ee221dd7",
+        "android_client_info": {
+          "package_name": "com.tikodvlp.madridistaapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "889648620534-1sbml52lq5c9bdpvuaat1idf1u6eg6ls.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJZ8EcSA0SUN-TTotsXW7jhl57gW3Zzfc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "889648620534-1sbml52lq5c9bdpvuaat1idf1u6eg6ls.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
     {
       "client_info": {
         "mobilesdk_app_id": "1:889648620534:android:67e862eaf55cd3ff221dd7",

@@ -133,11 +133,16 @@ public class SignUpActivity extends AppCompatActivity {
         String password = regPassword.getEditText().getText().toString();
         String phoneNum = regPhoneNum.getEditText().getText().toString();
 
+        // storing data in firebase
         UserHelperClass userHelperClass = new UserHelperClass(name, username, email, password, phoneNum);
         reference.child(username).setValue(userHelperClass);
 
-        Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+        Intent intent = new Intent(getApplicationContext(), VerifyPhoneNumber.class);
+        intent.putExtra("phoneNum", phoneNum);
         startActivity(intent);
+
+        //Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+        //startActivity(intent);
     }
 
     public void callLoginActivity(View view) {

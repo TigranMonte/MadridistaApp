@@ -22,4 +22,7 @@
     <string name="balance">Balance</string>
     <string name="booking">Booking</string>
     <string name="update">Update</string>
+    <string name="verify_num">Verify Phone Number</string>
+    <string name="enter_verify_num">Enter verification code if not automatically authenticated</string>
+    <string name="verify_hint">Enter OTP</string>
 </resources>
