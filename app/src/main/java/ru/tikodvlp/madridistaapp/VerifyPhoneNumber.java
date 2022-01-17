@@ -31,6 +31,7 @@ public class VerifyPhoneNumber extends AppCompatActivity {
     String verificationCodeBySystem;
     EditText enteredCode;
     ProgressBar progressBar;
+    FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,12 +48,20 @@ public class VerifyPhoneNumber extends AppCompatActivity {
     }
 
     private void sendVerificationCodeToUser(String phoneNum) {
-        PhoneAuthProvider.getInstance().verifyPhoneNumber(
-                "+7" + phoneNum,    // phone number to verify
-                60,                       // timeout duration
-                TimeUnit.SECONDS,                 // unit of timeout
-                (Activity) TaskExecutors.MAIN_THREAD,
-                mCallbacks);
+        PhoneAuthOptions options = PhoneAuthOptions.newBuilder(mAuth)
+                .setPhoneNumber("+7" + phoneNum)
+                .setTimeout(60L, TimeUnit.SECONDS)
+                .setActivity(this)
+                .setCallbacks(mCallbacks)
+                .build();
+        PhoneAuthProvider.verifyPhoneNumber(options);
+
+        //PhoneAuthProvider.getInstance().verifyPhoneNumber(
+                //"+7" + phoneNum,    // phone number to verify
+                //60,                       // timeout duration
+                //TimeUnit.SECONDS,                 // unit of timeout
+                //(Activity) TaskExecutors.MAIN_THREAD,
+                //mCallbacks);
     }
 
     private PhoneAuthProvider.OnVerificationStateChangedCallbacks mCallbacks =
