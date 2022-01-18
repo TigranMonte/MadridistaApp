@@ -55,25 +55,16 @@ public class VerifyPhoneNumber extends AppCompatActivity {
                 .setCallbacks(mCallbacks)
                 .build();
         PhoneAuthProvider.verifyPhoneNumber(options);
-
-        //PhoneAuthProvider.getInstance().verifyPhoneNumber(
-                //"+7" + phoneNum,    // phone number to verify
-                //60,                       // timeout duration
-                //TimeUnit.SECONDS,                 // unit of timeout
-                //(Activity) TaskExecutors.MAIN_THREAD,
-                //mCallbacks);
     }
 
     private PhoneAuthProvider.OnVerificationStateChangedCallbacks mCallbacks =
             new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
-
                 @Override
             public void onCodeSent(@NonNull String s, @NonNull PhoneAuthProvider.ForceResendingToken forceResendingToken) {
             super.onCodeSent(s, forceResendingToken);
 
             verificationCodeBySystem = s;
             }
-
                 @Override
             public void onVerificationCompleted(@NonNull PhoneAuthCredential phoneAuthCredential) {
             String code = phoneAuthCredential.getSmsCode();
@@ -82,7 +73,6 @@ public class VerifyPhoneNumber extends AppCompatActivity {
                 verifyCode(code);
             }
         }
-
         @Override
         public void onVerificationFailed(@NonNull FirebaseException e) {
             Toast.makeText(VerifyPhoneNumber.this, e.getMessage(), Toast.LENGTH_SHORT).show();

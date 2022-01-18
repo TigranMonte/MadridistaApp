@@ -14,7 +14,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class SplashActivity extends AppCompatActivity {
 
     public static final int SPLASH_SCREEN = 3000;
 
@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_splash);
 
         topAnimation = AnimationUtils.loadAnimation(this, R.anim.top_animation);
 
@@ -41,13 +41,13 @@ public class MainActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                Intent intent = new Intent(SplashActivity.this, LoginActivity.class);
                 Pair[] pairs = new Pair[2];
                 pairs[0] = new Pair<View, String>(ivLogo, "logo_image");
                 pairs[1] = new Pair<View, String>(tvWelcome, "logo_text");
 
                 ActivityOptions options = ActivityOptions.
-                        makeSceneTransitionAnimation(MainActivity.this, pairs);
+                        makeSceneTransitionAnimation(SplashActivity.this, pairs);
                 startActivity(intent, options.toBundle());
                 finish();
             }
