@@ -31,7 +31,6 @@ public class VerifyPhoneNumber extends AppCompatActivity {
     String verificationCodeBySystem;
     EditText enteredCode;
     ProgressBar progressBar;
-    FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +47,7 @@ public class VerifyPhoneNumber extends AppCompatActivity {
     }
 
     private void sendVerificationCodeToUser(String phoneNum) {
+        FirebaseAuth mAuth = FirebaseAuth.getInstance();
         PhoneAuthOptions options = PhoneAuthOptions.newBuilder(mAuth)
                 .setPhoneNumber("+7" + phoneNum)
                 .setTimeout(60L, TimeUnit.SECONDS)
