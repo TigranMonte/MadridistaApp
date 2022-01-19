@@ -141,8 +141,6 @@ public class SignUpActivity extends AppCompatActivity {
         intent.putExtra("phoneNum", phoneNum);
         startActivity(intent);
 
-        //Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
-        //startActivity(intent);
     }
 
     public void callLoginActivity(View view) {

@@ -40,6 +40,7 @@ public class VerifyPhoneNumber extends AppCompatActivity {
         btnVerify = findViewById(R.id.verify_btn);
         enteredCode = findViewById(R.id.entered_otp_by_user);
         progressBar = findViewById(R.id.progress_bar_verify);
+        progressBar.setVisibility(View.GONE);
 
         String phoneNum = getIntent().getStringExtra("phoneNum");
 
@@ -92,13 +93,18 @@ public class VerifyPhoneNumber extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            Intent intent = new Intent(getApplicationContext(), UserProfileActivity.class);
+                            Intent intent = new Intent(getApplicationContext(), SignUpActivity.class);
                             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                             startActivity(intent);
                         } else {
-                            Toast.makeText(VerifyPhoneNumber.this, "SingIn failed", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(VerifyPhoneNumber.this, "Verification failed", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
     }
+
+    //public void callProfileActivity(View view) {
+      //  Intent intent = new Intent(getApplicationContext(), UserProfileActivity.class);
+        //startActivity(intent);
+    //}
 }

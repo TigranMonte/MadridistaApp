@@ -56,6 +56,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:backgroundTint="@color/blue"
+            android:onClick="callProfileActivity"
             android:text="Verify"/>
         <ProgressBar
             android:id="@+id/progress_bar_verify"
