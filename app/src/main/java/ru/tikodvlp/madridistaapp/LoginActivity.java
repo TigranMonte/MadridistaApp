@@ -106,13 +106,11 @@ public class LoginActivity extends AppCompatActivity {
 
                         String nameFromDB = snapshot.child(userEnteredUsername).child("name").getValue(String.class);
                         String usernameFromDB = snapshot.child(userEnteredUsername).child("username").getValue(String.class);
-                        String phoneNumFromDB = snapshot.child(userEnteredUsername).child("phoneNum").getValue(String.class);
                         String emailFromDB = snapshot.child(userEnteredUsername).child("email").getValue(String.class);
 
                         Intent intent = new Intent(getApplicationContext(), UserProfileActivity.class);
                         intent.putExtra("name", nameFromDB);
                         intent.putExtra("username", usernameFromDB);
-                        intent.putExtra("phoneNum", phoneNumFromDB);
                         intent.putExtra("email", emailFromDB);
                         intent.putExtra("password", passwordFromDB);
 

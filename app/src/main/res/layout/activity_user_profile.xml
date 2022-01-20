@@ -187,21 +187,6 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/phone_num_profile"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:hint="@string/phone_hint">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:drawableLeft="@drawable/ic_baseline_contact_phone_24"
-                    android:drawablePadding="10dp"
-                    android:text="+79181133445" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/password_profile"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -222,6 +207,7 @@
                 android:backgroundTint="@color/blue"
                 android:fontFamily="sans-serif"
                 android:text="@string/update"
+                android:onClick="update"
                 android:textColor="@color/white"/>
         </LinearLayout>
     </LinearLayout>

@@ -10,9 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MadridistaApp">
         <activity
-            android:name=".VerifyPhoneNumber"
-            android:exported="false" />
-        <activity
             android:name=".UserProfileActivity"
             android:exported="false" />
         <activity

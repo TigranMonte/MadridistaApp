@@ -2,14 +2,13 @@ package ru.tikodvlp.madridistaapp;
 
 public class UserHelperClass {
 
-    String name, username, email, password, phoneNum;
+    String name, username, email, password;
 
-    public UserHelperClass(String name, String username, String email, String password, String phoneNum) {
+    public UserHelperClass(String name, String username, String email, String password) {
         this.name = name;
         this.username = username;
         this.email = email;
         this.password = password;
-        this.phoneNum = phoneNum;
     }
 
     public UserHelperClass() {
@@ -47,11 +46,4 @@ public class UserHelperClass {
         this.password = password;
     }
 
-    public String getPhoneNum() {
-        return phoneNum;
-    }
-
-    public void setPhoneNum(String phoneNum) {
-        this.phoneNum = phoneNum;
-    }
 }

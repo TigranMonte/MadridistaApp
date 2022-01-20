@@ -15,7 +15,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class SignUpActivity extends AppCompatActivity {
 
-    TextInputLayout regName, regUsername, regEmail, regPassword, regPhoneNum;
+    TextInputLayout regName, regUsername, regEmail, regPassword;
     Button btnEnter, btnToLogIn;
 
     FirebaseDatabase rootNode;
@@ -31,7 +31,6 @@ public class SignUpActivity extends AppCompatActivity {
         regUsername = findViewById(R.id.reg_username);
         regEmail = findViewById(R.id.reg_email);
         regPassword = findViewById(R.id.reg_password);
-        regPhoneNum = findViewById(R.id.reg_phoneNum);
         btnEnter = findViewById(R.id.btnEnter);
         btnToLogIn = findViewById(R.id.btnToLogIn);
 
@@ -111,34 +110,22 @@ public class SignUpActivity extends AppCompatActivity {
         }
     }
 
-    private Boolean validatePhone(){
-        String val = regPhoneNum.getEditText().getText().toString();
-        if (val.isEmpty()) {
-            regPhoneNum.setError("Field cannot be empty");
-            return false;
-        } else {
-            regPhoneNum.setError(null);
-            return true;
-        }
-    }
-
     // save data in FB on click
     public void registerUser(View view){
-        if(!validateName() |!validatePassword() | !validatePhone() | !validateEmail() | !validateUsername()) {
+        if(!validateName() |!validatePassword() | !validateEmail() | !validateUsername()) {
             return;
         }
         String name = regName.getEditText().getText().toString();
         String username = regUsername.getEditText().getText().toString();
         String email = regEmail.getEditText().getText().toString();
         String password = regPassword.getEditText().getText().toString();
-        String phoneNum = regPhoneNum.getEditText().getText().toString();
 
         // storing data in firebase
-        UserHelperClass userHelperClass = new UserHelperClass(name, username, email, password, phoneNum);
+        UserHelperClass userHelperClass = new UserHelperClass(name, username, email, password);
         reference.child(username).setValue(userHelperClass);
 
-        Intent intent = new Intent(getApplicationContext(), VerifyPhoneNumber.class);
-        intent.putExtra("phoneNum", phoneNum);
+        Intent intent = new Intent(getApplicationContext(), UserProfileActivity.class);
+        intent.putExtra("email", email);
         startActivity(intent);
 
     }
