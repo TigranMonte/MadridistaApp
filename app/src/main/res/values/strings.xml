@@ -25,4 +25,13 @@
     <string name="verify_num">Verify Phone Number</string>
     <string name="enter_verify_num">Enter verification code if not automatically authenticated</string>
     <string name="verify_hint">Enter OTP</string>
+    <string name="user_profile">User Profile</string>
+    <string name="club_info">We are Real Madrid</string>
+    <string name="team_info">Our team</string>
+    <string name="quiz">Real Madrid Quiz</string>
+    <string name="music">Real Madrid hymn</string>
+    <string name="support">Support</string>
+    <string name="become_madridista">Become madridista</string>
+    <string name="feedback">Give us a feedback</string>
+    <string name="slogan">Hasta la Final Vamos Real!</string>
 </resources>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="nav_user_profile"
+            android:title="@string/user_profile"
+            android:icon="@drawable/ic_baseline_person_24"
+            android:checked="true"/>
+        <item
+            android:id="@+id/nav_club"
+            android:title="@string/club_info"
+            android:icon="@drawable/ic_baseline_home_24"/>
+        <item
+            android:id="@+id/nav_team"
+            android:title="@string/team_info"
+            android:icon="@drawable/ic_baseline_people_24"/>
+        <item
+            android:id="@+id/nav_quiz"
+            android:title="@string/quiz"
+            android:icon="@drawable/ic_baseline_question_answer_24"/>
+        <item
+            android:id="@+id/nav_music"
+            android:title="@string/music"
+            android:icon="@drawable/ic_baseline_music_note_24"/>
+
+    </group>
+
+    <group android:checkableBehavior="single">
+        <item android:title="@string/support">
+            <menu>
+                <item
+                    android:id="@+id/becomeMadridista"
+                    android:title="@string/become_madridista"
+                    android:icon="@drawable/ic_baseline_card_membership_24"/>
+                <item
+                    android:id="@+id/feedback"
+                    android:title="@string/feedback"
+                    android:icon="@drawable/ic_baseline_feedback_24"/>
+            </menu>
+        </item>
+    </group>
+
+</menu>
