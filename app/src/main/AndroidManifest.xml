@@ -11,7 +11,7 @@
         android:theme="@style/Theme.MadridistaApp">
         <activity
             android:name=".UserProfileActivity"
-            android:exported="false" />
+            android:exported="false"/>
         <activity
             android:name=".SignUpActivity"
             android:exported="false" />

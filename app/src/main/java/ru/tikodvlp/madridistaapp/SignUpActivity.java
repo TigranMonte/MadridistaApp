@@ -131,7 +131,9 @@ public class SignUpActivity extends AppCompatActivity {
         //intent.putExtra("password", password);
         //intent.putExtra("username", username);
         startActivity(intent);
-        Toast.makeText(this, "Enter your data to Login", Toast.LENGTH_SHORT).show();
+
+        Toast.makeText(this, "New user created successfully! Enter your data to Login",
+                Toast.LENGTH_SHORT).show();
 
     }
 
