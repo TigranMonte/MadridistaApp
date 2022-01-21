@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.database.DatabaseReference;
@@ -124,9 +125,13 @@ public class SignUpActivity extends AppCompatActivity {
         UserHelperClass userHelperClass = new UserHelperClass(name, username, email, password);
         reference.child(username).setValue(userHelperClass);
 
-        Intent intent = new Intent(getApplicationContext(), UserProfileActivity.class);
-        intent.putExtra("email", email);
+        Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+        //intent.putExtra("email", email);
+        //intent.putExtra("username", name);
+        //intent.putExtra("password", password);
+        //intent.putExtra("username", username);
         startActivity(intent);
+        Toast.makeText(this, "Enter your data to Login", Toast.LENGTH_SHORT).show();
 
     }
 

@@ -60,26 +60,24 @@ public class UserProfileActivity extends AppCompatActivity {
     }
 
     private boolean isEmailChanged() {
-        if (!_EMAIL.equals(email.getEditText().getText().toString())) {
-            reference.child(_EMAIL).child("email").setValue(email.getEditText().getText().toString());
-            _EMAIL = email.getEditText().getText().toString();
-            return true;
+      if (!_EMAIL.equals(email.getEditText().getText().toString())) {
+          reference.child(_USERNAME).child("email").setValue(email.getEditText().getText().toString());
+          _EMAIL = email.getEditText().getText().toString();
+          return true;
         } else {
-            return false;
+           return false;
         }
     }
 
-
     private boolean isPasswordChanged() {
         if (!_PASSWORD.equals(password.getEditText().getText().toString())) {
-            reference.child(_PASSWORD).child("password").setValue(password.getEditText().getText().toString());
+            reference.child(_USERNAME).child("password").setValue(password.getEditText().getText().toString());
             _PASSWORD = password.getEditText().getText().toString();
             return true;
         } else {
             return false;
         }
     }
-
 
     private boolean isNameChanged() {
         if (!_NAME.equals(fullName.getEditText().getText().toString())) {
