@@ -1,6 +1,9 @@
 package ru.tikodvlp.madridistaapp;
 
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,6 +11,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -21,6 +25,10 @@ public class UserProfileActivity extends AppCompatActivity {
 
     DatabaseReference reference;
 
+    DrawerLayout drawerLayout;
+    NavigationView navigationView;
+    Toolbar toolbar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +41,16 @@ public class UserProfileActivity extends AppCompatActivity {
         password = findViewById(R.id.password_profile);
         fullNameLabel = findViewById(R.id.full_name_label);
         usernameLabel = findViewById(R.id.username_label);
+        drawerLayout = findViewById(R.id.drawer_layout);
+        navigationView = findViewById(R.id.nav_view);
+        toolbar = findViewById(R.id.toolbar);
+
+        setSupportActionBar(toolbar);
+
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar,
+                R.string.nav_open_drawer, R.string.nav_close_drawer);
+        drawerLayout.addDrawerListener(toggle);
+        toggle.syncState();
 
         showAllUserData();
     }

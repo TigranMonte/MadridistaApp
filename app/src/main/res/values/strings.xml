@@ -34,4 +34,6 @@
     <string name="become_madridista">Become madridista</string>
     <string name="feedback">Give us a feedback</string>
     <string name="slogan">Hasta la Final Vamos Real!</string>
+    <string name="nav_open_drawer">Open navigation drawer</string>
+    <string name="nav_close_drawer">Close navigation drawer</string>
 </resources>
