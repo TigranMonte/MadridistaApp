@@ -1,5 +1,6 @@
 package ru.tikodvlp.madridistaapp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -7,6 +8,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -16,7 +18,7 @@ import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class UserProfileActivity extends AppCompatActivity {
+public class UserProfileActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     TextInputLayout fullName, email, password;
     TextView fullNameLabel, usernameLabel;
@@ -46,6 +48,7 @@ public class UserProfileActivity extends AppCompatActivity {
         toolbar = findViewById(R.id.toolbar);
 
         setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("My profile");
 
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar,
                 R.string.nav_open_drawer, R.string.nav_close_drawer);
@@ -54,6 +57,7 @@ public class UserProfileActivity extends AppCompatActivity {
 
         showAllUserData();
     }
+
 
     private void showAllUserData() {
         Intent intent = getIntent();
@@ -105,5 +109,10 @@ public class UserProfileActivity extends AppCompatActivity {
         } else {
             return false;
         }
+    }
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        return false;
     }
 }
