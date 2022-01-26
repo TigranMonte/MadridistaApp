@@ -36,7 +36,7 @@ public class AudioActivity extends AppCompatActivity {
         btPause = findViewById(R.id.bt_pause);
         btPlay = findViewById(R.id.bt_play);
 
-        mediaPlayer = MediaPlayer.create(this, R.raw.hymn);
+        mediaPlayer = MediaPlayer.create(this, R.raw.anthem);
 
         runnable = new Runnable() {
             @Override
