@@ -20,7 +20,7 @@
             android:layout_height="150dp"
             android:layout_gravity="center"
             android:contentDescription="@string/app_name"
-            android:src="@drawable/ic_madridlogo"
+            android:src="@drawable/ic_madrid_logo"
             android:transitionName="logo_image" />
 
         <TextView

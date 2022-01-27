@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/ic_madridLogo.xml" value="0.2611111111111111" />
         <entry key="app/src/main/res/drawable/ic_madridlogo.xml" value="0.25104166666666666" />
         <entry key="app/src/main/res/drawable/ic_music.xml" value="0.26153846153846155" />
         <entry key="app/src/main/res/layout/activity_audio.xml" value="0.2164855072463768" />

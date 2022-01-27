@@ -13,7 +13,7 @@
         android:layout_height="352dp"
         android:layout_marginTop="50dp"
         android:contentDescription="@string/app_name"
-        android:src="@drawable/ic_madridlogo"
+        android:src="@drawable/ic_madrid_logo"
         android:transitionName="logo_image"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
