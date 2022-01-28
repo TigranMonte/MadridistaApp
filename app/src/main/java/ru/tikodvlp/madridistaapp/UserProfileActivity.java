@@ -56,9 +56,11 @@ public class UserProfileActivity extends AppCompatActivity implements Navigation
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
 
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
+
         showAllUserData();
     }
-
 
     private void showAllUserData() {
         Intent intent = getIntent();
@@ -112,10 +114,7 @@ public class UserProfileActivity extends AppCompatActivity implements Navigation
         }
     }
 
-    @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        return false;
-    }
+
 
     @Override
     public void onBackPressed() {
@@ -124,5 +123,20 @@ public class UserProfileActivity extends AppCompatActivity implements Navigation
         } else {
             super.onBackPressed();
         }
+    }
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+        Intent intent = null;
+        switch (item.getItemId()) {
+            case R.id.nav_user_profile:
+                break;
+            case R.id.nav_music:
+                intent = new Intent(UserProfileActivity.this, AudioActivity.class);
+                startActivity(intent);
+                break;
+        }
+        return true;
     }
 }

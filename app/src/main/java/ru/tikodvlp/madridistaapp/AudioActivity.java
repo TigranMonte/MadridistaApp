@@ -1,6 +1,7 @@
 package ru.tikodvlp.madridistaapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.annotation.SuppressLint;
 import android.media.MediaPlayer;
@@ -22,6 +23,7 @@ public class AudioActivity extends AppCompatActivity {
     MediaPlayer mediaPlayer;
     Handler handler = new Handler();
     Runnable runnable;
+    Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +37,10 @@ public class AudioActivity extends AppCompatActivity {
         btFf = findViewById(R.id.bt_ff);
         btPause = findViewById(R.id.bt_pause);
         btPlay = findViewById(R.id.bt_play);
+        toolbar = findViewById(R.id.toolbar);
+
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("Real Madrid Anthem");
 
         mediaPlayer = MediaPlayer.create(this, R.raw.anthem);
 
@@ -153,6 +159,5 @@ public class AudioActivity extends AppCompatActivity {
         return String.format("%02d:%02d", TimeUnit.MILLISECONDS.toMinutes(duration),
                 TimeUnit.MILLISECONDS.toSeconds(duration) -
                         TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(duration)));
-
     }
 }
