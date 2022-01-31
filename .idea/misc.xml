@@ -14,6 +14,8 @@
         <entry key="app/src/main/res/layout/activity_top_level.xml" value="0.20380434782608695" />
         <entry key="app/src/main/res/layout/activity_user_profile.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_verify_phone_number.xml" value="0.23052536231884058" />
+        <entry key="app/src/main/res/layout/activity_we_are_real.xml" value="0.23541666666666666" />
+        <entry key="app/src/main/res/layout/fragment_we_are_real.xml" value="0.24818840579710144" />
         <entry key="app/src/main/res/layout/nav_header.xml" value="0.19791666666666666" />
         <entry key="app/src/main/res/layout/toolbar_main.xml" value="0.1933876811594203" />
         <entry key="app/src/main/res/menu/main_menu.xml" value="0.24947916666666667" />
