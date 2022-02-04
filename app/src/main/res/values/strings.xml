@@ -37,4 +37,11 @@
     <string name="nav_open_drawer">Open navigation drawer</string>
     <string name="nav_close_drawer">Close navigation drawer</string>
     <string name="share">Share</string>
+    <string name="quizSlogan">My Real Madrid Quiz</string>
+    <string name="highscore_start">Highscore: 0</string>
+    <string name="score_0">Score: 0</string>
+    <string name="quiz_start">Start Quiz</string>
+    <string name="question_score">Question: 1/x</string>
+    <string name="time_counter">00:30</string>
+    <string name="confirm">Confirm</string>
 </resources>

@@ -9,8 +9,10 @@
         <entry key="app/src/main/res/layout/activity_audio.xml" value="0.2164855072463768" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_quiz.xml" value="0.245018115942029" />
         <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.11423505572441743" />
+        <entry key="app/src/main/res/layout/activity_starting_screen_quiz.xml" value="0.245018115942029" />
         <entry key="app/src/main/res/layout/activity_top_level.xml" value="0.20380434782608695" />
         <entry key="app/src/main/res/layout/activity_user_profile.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_verify_phone_number.xml" value="0.23052536231884058" />

@@ -11,4 +11,5 @@
     <color name="white_2">#eee9e9</color>
     <color name="transparent">#00000000</color>
     <color name="amber">#FFE082</color>
+    <color name="QuizBackgroundColor">#E1F5FE</color>
 </resources>
