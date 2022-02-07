@@ -44,4 +44,5 @@
     <string name="question_score">Question: 1/x</string>
     <string name="time_counter">00:30</string>
     <string name="confirm">Confirm</string>
+    <string name="real_madrid_quiz">Real Madrid Quiz</string>
 </resources>

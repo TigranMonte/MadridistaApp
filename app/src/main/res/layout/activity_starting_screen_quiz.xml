@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@color/QuizBackgroundColor"
     android:padding="16dp"
-    tools:context=".StartingScreenQuizActivity">
+    tools:context=".quiz.StartingScreenQuizActivity">
 
     <TextView
         android:layout_width="wrap_content"
