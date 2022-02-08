@@ -1,4 +1,4 @@
-package ru.tikodvlp.madridistaapp.quiz;
+package ru.tikodvlp.madridistaapp;
 
 public class Question {
 

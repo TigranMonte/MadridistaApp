@@ -1,12 +1,19 @@
-package ru.tikodvlp.madridistaapp.quiz;
+package ru.tikodvlp.madridistaapp;
 
+import android.annotation.SuppressLint;
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import ru.tikodvlp.madridistaapp.quiz.QuizContract.*;
+
+import ru.tikodvlp.madridistaapp.Question;
+import ru.tikodvlp.madridistaapp.QuizContract.*;
 
 import androidx.annotation.Nullable;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class QuizDBHelper extends SQLiteOpenHelper {
 
@@ -60,5 +67,25 @@ public class QuizDBHelper extends SQLiteOpenHelper {
         cv.put(QuestionsTable.COLUMN_ANSWER_NUM, question.getAnswerNum());
 
         db.insert(QuestionsTable.TABLE_NAME, null, cv);
+    }
+    @SuppressLint("Range")
+    public List<Question> getAllQuestions() {
+         List<Question> questionList = new ArrayList<>();
+         db = getReadableDatabase();
+         Cursor cursor = db.rawQuery("SELECT * FROM " + QuestionsTable.TABLE_NAME, null);
+         if (cursor.moveToFirst()) {
+             do {
+                 Question question = new Question();
+                 question.setQuestion(cursor.getString(cursor.getColumnIndex(QuestionsTable.COLUMN_QUESTION)));
+                 question.setOption1(cursor.getString(cursor.getColumnIndex(QuestionsTable.COLUMN_OPTION1)));
+                 question.setOption2(cursor.getString(cursor.getColumnIndex(QuestionsTable.COLUMN_OPTION2)));
+                 question.setOption3(cursor.getString(cursor.getColumnIndex(QuestionsTable.COLUMN_OPTION3)));
+                 question.setOption4(cursor.getString(cursor.getColumnIndex(QuestionsTable.COLUMN_OPTION4)));
+                 question.setAnswerNum(cursor.getInt(cursor.getColumnIndex(QuestionsTable.COLUMN_ANSWER_NUM)));
+                 questionList.add(question);
+             } while (cursor.moveToNext());
+         }
+         cursor.close();
+         return questionList;
     }
 }

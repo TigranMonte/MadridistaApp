@@ -6,8 +6,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -140,6 +138,10 @@ public class UserProfileActivity extends AppCompatActivity implements Navigation
                 break;
             case R.id.nav_club:
                 intent = new Intent(UserProfileActivity.this, WeAreRealActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.nav_quiz:
+                intent = new Intent(UserProfileActivity.this, StartingScreenQuizActivity.class);
                 startActivity(intent);
                 break;
         }

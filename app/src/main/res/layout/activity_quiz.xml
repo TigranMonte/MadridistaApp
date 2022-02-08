@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:padding="16dp"
     android:background="@color/QuizBackgroundColor"
-    tools:context=".quiz.QuizActivity">
+    tools:context=".QuizActivity">
 
     <TextView
         android:id="@+id/tvScore"
@@ -29,7 +29,7 @@
         android:textSize="25sp"/>
 
     <TextView
-        android:id="@+id/tvCountdown"
+        android:id="@+id/tvCountDown"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/time_counter"
@@ -73,6 +73,13 @@
             android:fontFamily="sans-serif-condensed"/>
         <RadioButton
             android:id="@+id/radio_button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Option 3"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-condensed"/>
+        <RadioButton
+            android:id="@+id/radio_button4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Option 3"

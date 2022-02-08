@@ -1,4 +1,4 @@
-package ru.tikodvlp.madridistaapp.quiz;
+package ru.tikodvlp.madridistaapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -7,19 +7,20 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-
-import ru.tikodvlp.madridistaapp.R;
+import android.widget.TextView;
 
 public class StartingScreenQuizActivity extends AppCompatActivity {
 
     Button btnStartQuiz;
     Toolbar toolbar;
+    TextView tvHighscore;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_starting_screen_quiz);
 
+        tvHighscore = findViewById(R.id.tvHighscore);
         toolbar = findViewById(R.id.toolbar);
 
         setSupportActionBar(toolbar);
@@ -37,7 +38,7 @@ public class StartingScreenQuizActivity extends AppCompatActivity {
     }
 
     private void startQuiz() {
-        Intent intent = new Intent(StartingScreenQuizActivity.this, QuizActivity.class);
+      Intent intent = new Intent(StartingScreenQuizActivity.this, QuizActivity.class);
         startActivity(intent);
     }
 

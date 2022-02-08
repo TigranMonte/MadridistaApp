@@ -10,10 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MadridistaApp">
         <activity
-            android:name=".quiz.StartingScreenQuizActivity"
+            android:name=".StartingScreenQuizActivity"
             android:exported="false" />
         <activity
-            android:name=".quiz.QuizActivity"
+            android:name=".QuizActivity"
             android:exported="false" />
         <activity
             android:name=".WeAreRealActivity"
