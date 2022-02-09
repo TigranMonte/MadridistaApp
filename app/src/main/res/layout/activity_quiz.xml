@@ -1,18 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
-    android:background="@color/QuizBackgroundColor"
-    tools:context=".QuizActivity">
+    android:orientation="vertical"
+    android:background="@color/white_2"
+    tools:context=".quiz.QuizActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/toolbar_main"
+            android:id="@+id/toolbar"/>
 
     <TextView
         android:id="@+id/tvScore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_margin="10dp"
         android:text="@string/score_0"
         android:textColor="@color/blue"
         android:fontFamily="sans-serif-condensed-medium"
@@ -22,11 +32,16 @@
         android:id="@+id/tvQuestionCount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tvScore"
+        android:layout_margin="10dp"
         android:text="@string/question_score"
         android:textColor="@color/blue"
         android:fontFamily="sans-serif-condensed-medium"
         android:textSize="25sp"/>
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center"
+        android:src="@drawable/logo_bw"/>
 
     <TextView
         android:id="@+id/tvCountDown"
@@ -36,8 +51,9 @@
         android:textSize="40sp"
         android:textColor="@color/black"
         android:textStyle="bold"
-        android:fontFamily="sans-serif-condensed"
-        android:layout_alignParentEnd="true"/>
+        android:layout_margin="10dp"
+        android:layout_gravity="end"
+        android:fontFamily="sans-serif-condensed"/>
 
     <TextView
         android:id="@+id/tvQuestion"
@@ -45,10 +61,9 @@
         android:layout_height="wrap_content"
         android:text="Here is the question"
         android:textSize="25sp"
-        android:textColor="@color/black"
+        android:textColor="@color/blue"
         android:fontFamily="sans-serif-condensed"
         android:textStyle="bold"
-        android:layout_above="@+id/radio_group"
         android:layout_marginBottom="16dp"
         android:textAlignment="center"/>
 
@@ -56,13 +71,14 @@
         android:id="@+id/radio_group"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true">
+        android:layout_gravity="center">
         <RadioButton
             android:id="@+id/radio_button1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Option 1"
             android:textStyle="bold"
+            android:textColor="@color/blue"
             android:fontFamily="sans-serif-condensed"/>
         <RadioButton
             android:id="@+id/radio_button2"
@@ -70,6 +86,7 @@
             android:layout_height="wrap_content"
             android:text="Option 2"
             android:textStyle="bold"
+            android:textColor="@color/blue"
             android:fontFamily="sans-serif-condensed"/>
         <RadioButton
             android:id="@+id/radio_button3"
@@ -77,6 +94,7 @@
             android:layout_height="wrap_content"
             android:text="Option 3"
             android:textStyle="bold"
+            android:textColor="@color/blue"
             android:fontFamily="sans-serif-condensed"/>
         <RadioButton
             android:id="@+id/radio_button4"
@@ -84,6 +102,7 @@
             android:layout_height="wrap_content"
             android:text="Option 3"
             android:textStyle="bold"
+            android:textColor="@color/blue"
             android:fontFamily="sans-serif-condensed"/>
     </RadioGroup>
 
@@ -92,7 +111,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/confirm"
-        android:layout_below="@id/radio_group"
+        android:textSize="15sp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:layout_marginTop="20dp"/>
-
-</RelativeLayout>
+    </LinearLayout>
+</ScrollView>

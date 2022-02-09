@@ -19,6 +19,8 @@ import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import ru.tikodvlp.madridistaapp.quiz.StartingScreenQuizActivity;
+
 public class UserProfileActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     TextInputLayout fullName, email, password;

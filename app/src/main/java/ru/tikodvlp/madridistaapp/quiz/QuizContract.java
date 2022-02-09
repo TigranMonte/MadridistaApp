@@ -1,4 +1,4 @@
-package ru.tikodvlp.madridistaapp;
+package ru.tikodvlp.madridistaapp.quiz;
 
 import android.provider.BaseColumns;
 

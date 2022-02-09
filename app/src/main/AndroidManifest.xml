@@ -10,10 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MadridistaApp">
         <activity
-            android:name=".StartingScreenQuizActivity"
+            android:name=".quiz.StartingScreenQuizActivity"
             android:exported="false" />
         <activity
-            android:name=".QuizActivity"
+            android:name=".quiz.QuizActivity"
             android:exported="false" />
         <activity
             android:name=".WeAreRealActivity"
@@ -29,9 +29,6 @@
             android:exported="false" />
         <activity
             android:name=".LoginActivity"
-            android:exported="false" />
-        <activity
-            android:name=".TopLevelActivity"
             android:exported="false" />
         <activity
             android:name=".SplashActivity"

@@ -1,4 +1,4 @@
-package ru.tikodvlp.madridistaapp;
+package ru.tikodvlp.madridistaapp.quiz;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import ru.tikodvlp.madridistaapp.R;
 
 public class StartingScreenQuizActivity extends AppCompatActivity {
 

@@ -1,4 +1,4 @@
-package ru.tikodvlp.madridistaapp;
+package ru.tikodvlp.madridistaapp.quiz;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,8 +7,11 @@ import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import androidx.appcompat.widget.Toolbar;
 
 import java.util.List;
+
+import ru.tikodvlp.madridistaapp.R;
 
 public class QuizActivity extends AppCompatActivity {
 
@@ -22,6 +25,7 @@ public class QuizActivity extends AppCompatActivity {
     private RadioButton rb3;
     private RadioButton rb4;
     Button btnConfirmNext;
+    Toolbar toolbar;
 
     private List<Question> questionList;
 
@@ -39,6 +43,12 @@ public class QuizActivity extends AppCompatActivity {
         rb2 = findViewById(R.id.radio_button2);
         rb3 = findViewById(R.id.radio_button3);
         rb4 = findViewById(R.id.radio_button4);
+        toolbar = findViewById(R.id.toolbar);
+
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle(R.string.real_madrid_quiz);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         QuizDBHelper dbHelper = new QuizDBHelper(this);
         questionList = dbHelper.getAllQuestions();

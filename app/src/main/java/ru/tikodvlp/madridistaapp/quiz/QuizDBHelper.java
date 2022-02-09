@@ -1,4 +1,4 @@
-package ru.tikodvlp.madridistaapp;
+package ru.tikodvlp.madridistaapp.quiz;
 
 import android.annotation.SuppressLint;
 import android.content.ContentValues;
@@ -7,8 +7,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import ru.tikodvlp.madridistaapp.Question;
-import ru.tikodvlp.madridistaapp.QuizContract.*;
+import ru.tikodvlp.madridistaapp.quiz.QuizContract.*;
 
 import androidx.annotation.Nullable;
 
