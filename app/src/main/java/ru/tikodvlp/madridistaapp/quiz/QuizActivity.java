@@ -1,5 +1,6 @@
 package ru.tikodvlp.madridistaapp.quiz;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -16,8 +17,8 @@ import android.widget.Toast;
 
 import androidx.appcompat.widget.Toolbar;
 
+import java.util.ArrayList;
 import java.util.Collections;
-import java.util.List;
 import java.util.Locale;
 
 import ru.tikodvlp.madridistaapp.R;
@@ -27,15 +28,16 @@ public class QuizActivity extends AppCompatActivity {
     public static final String EXTRA_SCORE = "extraScore";
     private static final long COUNTDOWN_IN_MILLIS = 30000;
 
-    private TextView tvScore;
-    private TextView tvQuestionCount;
-    private TextView tvCountDown;
-    private TextView tvQuestion;
+    private static final String KEY_SCORE = "keyScore";
+    private static final String KEY_QUESTION_COUNT = "keyQuestionCount";
+    private static final String KEY_MILLIS_LEFT = "keyMillisLeft";
+    private static final String KEY_ANSWERED = "keyAnswered";
+    private static final String KEY_QUESTION_LIST = "keyQuestionList";
+
+    private TextView tvScore, tvQuestionCount, tvCountDown, tvQuestion;
     private RadioGroup rbGroup;
-    private RadioButton rb1;
-    private RadioButton rb2;
-    private RadioButton rb3;
-    private RadioButton rb4;
+    private RadioButton rb1, rb2, rb3, rb4;
+
     Button btnConfirmNext;
 
     private ColorStateList textColorDefaultRb;
@@ -46,7 +48,7 @@ public class QuizActivity extends AppCompatActivity {
 
     Toolbar toolbar;
 
-    private List<Question> questionList;
+    private ArrayList<Question> questionList;
 
     private int questionCounter;
     private int questionCountTotal;
@@ -82,13 +84,29 @@ public class QuizActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
-        QuizDBHelper dbHelper = new QuizDBHelper(this);
-        questionList = dbHelper.getAllQuestions();
+        if (savedInstanceState == null) {
+            QuizDBHelper dbHelper = new QuizDBHelper(this);
+            questionList = dbHelper.getAllQuestions();
+            questionCountTotal = questionList.size();
+            Collections.shuffle(questionList);
 
-        questionCountTotal = questionList.size();
-        Collections.shuffle(questionList);
+            showNextQuestion();
+        } else {
+            questionList = savedInstanceState.getParcelableArrayList(KEY_QUESTION_LIST);
+            questionCountTotal = questionList.size();
+            questionCounter = savedInstanceState.getInt(KEY_QUESTION_COUNT);
+            currentQuestion = questionList.get(questionCounter -1);
+            score = savedInstanceState.getInt(KEY_SCORE);
+            timeLeftInMillis = savedInstanceState.getLong(KEY_MILLIS_LEFT);
+            answered = savedInstanceState.getBoolean(KEY_ANSWERED);
 
-        showNextQuestion();
+            if (!answered) {
+                startCountDown();
+            } else {
+                updateCountDownText();
+                showSolution();
+            }
+        }
 
         btnConfirmNext.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -240,5 +258,15 @@ public class QuizActivity extends AppCompatActivity {
         if (countDownTimer != null) {
             countDownTimer.cancel();
         }
+    }
+
+    @Override
+    public void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putInt(KEY_SCORE, score);
+        outState.putInt(KEY_QUESTION_COUNT, questionCounter);
+        outState.putLong(KEY_MILLIS_LEFT, timeLeftInMillis);
+        outState.putBoolean(KEY_ANSWERED, answered);
+        outState.putParcelableArrayList(KEY_QUESTION_LIST, questionList);
     }
 }

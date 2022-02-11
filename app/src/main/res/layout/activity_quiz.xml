@@ -26,7 +26,8 @@
         android:text="@string/score_0"
         android:textColor="@color/blue"
         android:fontFamily="sans-serif-condensed-medium"
-        android:textSize="25sp"/>
+        android:textSize="20sp"
+        android:freezesText="true"/>
 
     <TextView
         android:id="@+id/tvQuestionCount"
@@ -36,7 +37,8 @@
         android:text="@string/question_score"
         android:textColor="@color/blue"
         android:fontFamily="sans-serif-condensed-medium"
-        android:textSize="25sp"/>
+        android:textSize="20sp"
+        android:freezesText="true"/>
     <ImageView
         android:layout_width="120dp"
         android:layout_height="120dp"
@@ -52,6 +54,7 @@
         android:textColor="@color/black"
         android:textStyle="bold"
         android:layout_margin="10dp"
+        android:freezesText="true"
         android:layout_gravity="end"
         android:fontFamily="sans-serif-condensed"/>
 
@@ -65,7 +68,8 @@
         android:fontFamily="sans-serif-condensed"
         android:textStyle="bold"
         android:layout_marginBottom="16dp"
-        android:textAlignment="center"/>
+        android:textAlignment="center"
+        android:freezesText="true"/>
 
     <RadioGroup
         android:id="@+id/radio_group"
@@ -79,7 +83,8 @@
             android:text="Option 1"
             android:textStyle="bold"
             android:textColor="@color/blue"
-            android:fontFamily="sans-serif-condensed"/>
+            android:fontFamily="sans-serif-condensed"
+            android:freezesText="true"/>
         <RadioButton
             android:id="@+id/radio_button2"
             android:layout_width="wrap_content"
@@ -87,7 +92,8 @@
             android:text="Option 2"
             android:textStyle="bold"
             android:textColor="@color/blue"
-            android:fontFamily="sans-serif-condensed"/>
+            android:fontFamily="sans-serif-condensed"
+            android:freezesText="true"/>
         <RadioButton
             android:id="@+id/radio_button3"
             android:layout_width="wrap_content"
@@ -95,15 +101,17 @@
             android:text="Option 3"
             android:textStyle="bold"
             android:textColor="@color/blue"
-            android:fontFamily="sans-serif-condensed"/>
+            android:fontFamily="sans-serif-condensed"
+            android:freezesText="true"/>
         <RadioButton
             android:id="@+id/radio_button4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Option 3"
+            android:text="Option 4"
             android:textStyle="bold"
             android:textColor="@color/blue"
-            android:fontFamily="sans-serif-condensed"/>
+            android:fontFamily="sans-serif-condensed"
+            android:freezesText="true"/>
     </RadioGroup>
 
     <Button
@@ -114,6 +122,7 @@
         android:textSize="15sp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="20dp"
+        android:freezesText="true"/>
     </LinearLayout>
 </ScrollView>
