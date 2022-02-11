@@ -2,6 +2,7 @@ package ru.tikodvlp.madridistaapp.quiz;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -20,6 +21,8 @@ import java.util.List;
 import ru.tikodvlp.madridistaapp.R;
 
 public class QuizActivity extends AppCompatActivity {
+
+    public static final String EXTRA_SCORE = "extraScore";
 
     private TextView tvScore;
     private TextView tvQuestionCount;
@@ -43,6 +46,8 @@ public class QuizActivity extends AppCompatActivity {
 
     private int score;
     private boolean answered;
+
+    private long backPressedTime;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -162,7 +167,20 @@ public class QuizActivity extends AppCompatActivity {
     }
 
     private void finishQuiz() {
+        Intent resultIntent  = new Intent();
+        resultIntent.putExtra(EXTRA_SCORE, score);
+        setResult(RESULT_OK, resultIntent);
         finish();
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (backPressedTime + 2000 > System.currentTimeMillis()) {
+            finishQuiz();
+        } else {
+            Toast.makeText(this, "Press back again to finish", Toast.LENGTH_SHORT).show();
+        }
+        backPressedTime = System.currentTimeMillis();
     }
 
     @Override
