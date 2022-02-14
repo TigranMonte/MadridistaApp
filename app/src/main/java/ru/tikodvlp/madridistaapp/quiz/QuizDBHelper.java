@@ -7,6 +7,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import ru.tikodvlp.madridistaapp.R;
 import ru.tikodvlp.madridistaapp.quiz.QuizContract.*;
 
 import androidx.annotation.Nullable;
@@ -17,7 +18,7 @@ import java.util.List;
 public class QuizDBHelper extends SQLiteOpenHelper {
 
     private static final String DATABASE_NAME = "RealMadridQuiz";
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 2;
 
     private SQLiteDatabase db;
 
@@ -51,9 +52,39 @@ public class QuizDBHelper extends SQLiteOpenHelper {
     }
 
     private void fillQuestionsTable() {
-         Question q1 = new Question("A is correct?", "A", "B",
-                 "C", "D", 1);
+         Question q1 = new Question("When did Real Madrid founded?", "1901", "1902",
+                 "1900", "1905", 2);
          addQuestion(q1);
+        Question q2 = new Question("When did King Alfonso XII add the word 'real' in the front of club name?",
+                "1920", "1910", "1917", "1919", 1);
+        addQuestion(q2);
+        Question q3 = new Question("What does 'real' mean?", "Royal", "King's institution", "White",
+                "Galacticos", 1);
+        addQuestion(q3);
+        Question q4 = new Question("The name of Real Madrid stadium is...", "Madrid Arena",
+                "Paco Gento stadium", "Santiago Bernabeu",
+                "Alfredo Di Stefano", 3);
+        addQuestion(q4);
+        Question q5 = new Question("Real Madrid is among the three teams to never been in Second division, " +
+                "Which are the other two teams", "Barcelona, Sevilla", "Barcelona, Atletico Madrid",
+                "Athletic Bilbao, Atletico Madrid", "Barcelona, Athletic Bilbao", 4);
+        addQuestion(q5);
+        Question q6 = new Question("The capacity of the Santiago Bernabeu stadium is...",
+                "81 044", "77 987", "79 503", "80 453", 1);
+        addQuestion(q6);
+        Question q7 = new Question("How many Ligas Real Madrid has won?", "33",
+                "31", "32", "34", 4);
+        addQuestion(q7);
+        Question q8 = new Question("How many Champions League titles Rael Madrid has won?",
+                "10", "11", "12", "13", 4);
+        addQuestion(q8);
+        Question q9 = new Question("During of all domestic games in 7th minute madridistas sing " +
+                "a special tribute to a legendary player, his name is...", "Raul",
+                "Juanito", "Cristiano Ronaldo", "Alfredo Di Stefano", 2);
+        addQuestion(q9);
+        Question q10 = new Question("Real Madrid president name is...?", "Alphonso Lopez",
+                "Carlo Ancelotti", "Joan Laporta", "Florentino Perez", 4);
+        addQuestion(q10);
     }
 
     private void addQuestion(Question question) {

@@ -45,4 +45,9 @@
     <string name="time_counter">00:30</string>
     <string name="confirm">Confirm</string>
     <string name="real_madrid_quiz">Real Madrid Quiz</string>
+    <string name="question1">When did Real Madrid founded?</string>
+    <string name="option1_1">1901</string>
+    <string name="option1_2">1902</string>
+    <string name="option1_3">1900</string>
+    <string name="option1_4">1905</string>
 </resources>
