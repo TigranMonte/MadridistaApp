@@ -52,7 +52,7 @@ public class QuizDBHelper extends SQLiteOpenHelper {
     }
 
     private void fillQuestionsTable() {
-         Question q1 = new Question("When did Real Madrid founded?", "1901", "1902",
+         Question q1 = new Question("When Real Madrid was founded?", "1901", "1902",
                  "1900", "1905", 2);
          addQuestion(q1);
         Question q2 = new Question("When did King Alfonso XII add the word 'real' in the front of club name?",
@@ -72,13 +72,13 @@ public class QuizDBHelper extends SQLiteOpenHelper {
         Question q6 = new Question("The capacity of the Santiago Bernabeu stadium is...",
                 "81 044", "77 987", "79 503", "80 453", 1);
         addQuestion(q6);
-        Question q7 = new Question("How many Ligas Real Madrid has won?", "33",
+        Question q7 = new Question("How many National Championships Real Madrid has won?", "33",
                 "31", "32", "34", 4);
         addQuestion(q7);
-        Question q8 = new Question("How many Champions League titles Rael Madrid has won?",
+        Question q8 = new Question("How many Champions League Real Madrid has won?",
                 "10", "11", "12", "13", 4);
         addQuestion(q8);
-        Question q9 = new Question("During of all domestic games in 7th minute madridistas sing " +
+        Question q9 = new Question("During of all domestic games in 7th minute madridistas pay " +
                 "a special tribute to a legendary player, his name is...", "Raul",
                 "Juanito", "Cristiano Ronaldo", "Alfredo Di Stefano", 2);
         addQuestion(q9);
