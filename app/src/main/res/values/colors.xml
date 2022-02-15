@@ -12,4 +12,5 @@
     <color name="transparent">#00000000</color>
     <color name="amber">#FFE082</color>
     <color name="QuizBackgroundColor">#E1F5FE</color>
+    <color name="AudioBackgroundColor">#607D8B</color>
 </resources>

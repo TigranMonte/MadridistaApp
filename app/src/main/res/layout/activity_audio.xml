@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/design_default_color_primary_dark"
+    android:background="@color/AudioBackgroundColor"
     tools:context=".AudioActivity">
     <include
         layout="@layout/toolbar_main"
@@ -68,4 +68,10 @@
             android:layout_height="60dp"
             android:src="@drawable/ic_fast_forward"/>
     </LinearLayout>
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/logo_bw"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"/>
 </LinearLayout>
