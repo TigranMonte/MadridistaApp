@@ -7,6 +7,7 @@
     <string name="signIn">Sign In to continue</string>
     <string name="signUp">Sign Up to start</string>
     <string name="username_hint">Username</string>
+    <string name="reset_password">Reset Password</string>
     <string name="password_hint">Password</string>
     <string name="phone_hint">Phone number</string>
     <string name="forgot_password">Forgot password?</string>
@@ -16,6 +17,7 @@
     <string name="full_name">Full Name</string>
     <string name="username">Username</string>
     <string name="email">Email</string>
+    <string name="enter_email">Enter your email</string>
     <string name="go">GO</string>
     <string name="already">Already have an account? LogIn</string>
     <string name="wallet">123$</string>

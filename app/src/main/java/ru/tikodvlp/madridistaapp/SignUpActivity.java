@@ -126,9 +126,9 @@ public class SignUpActivity extends AppCompatActivity {
         reference.child(username).setValue(userHelperClass);
 
         Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
-        //intent.putExtra("email", email);
+        intent.putExtra("email", email);
         //intent.putExtra("username", name);
-        //intent.putExtra("password", password);
+        intent.putExtra("password", password);
         //intent.putExtra("username", username);
         startActivity(intent);
 

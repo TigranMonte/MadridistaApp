@@ -75,11 +75,13 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
+            android:id="@+id/btnForgotPassword"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/transparent"
             android:textColor="@color/blue"
             android:textStyle="bold"
+            android:onClick="callForgotPassword"
             android:text="@string/forgot_password"
             android:layout_gravity="end"
             android:elevation="0dp"

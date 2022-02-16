@@ -26,7 +26,7 @@ public class LoginActivity extends AppCompatActivity {
     Button callSignUp;
     ImageView ivLogo;
     TextView tvLogoName, tvSignText;
-    Button btnEnterLogin, signUpScreen;
+    Button btnEnterLogin,signUpScreen, btnForgotPassword;
     TextInputLayout username, password;
     ProgressBar progressBar;
 
@@ -41,6 +41,7 @@ public class LoginActivity extends AppCompatActivity {
         tvLogoName = findViewById(R.id.logoNameLogin);
         tvSignText = findViewById(R.id.tvSignInLogin);
         btnEnterLogin = findViewById(R.id.btnEnterLogin);
+        btnForgotPassword = findViewById(R.id.btnForgotPassword);
         username = findViewById(R.id.username);
         password = findViewById(R.id.password);
         progressBar = findViewById(R.id.progressBar);
@@ -136,6 +137,19 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
     }
+    public void callForgotPassword(View view) {
+        Intent intent = new Intent(LoginActivity.this, ForgotPasswordActivity.class);
+        Pair[] pairs = new Pair[5];
+
+        pairs[0] = new Pair<View, String>(ivLogo, "logo_image");
+        pairs[1] = new Pair<View, String>(tvLogoName, "logo_text");
+        pairs[2] = new Pair<View, String>(username, "email_tran");
+        pairs[3] = new Pair<View, String>(tvSignText, "reset");
+        pairs[4] = new Pair<View, String>(btnEnterLogin, "reset");
+
+        ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(LoginActivity.this, pairs);
+        startActivity(intent, options.toBundle());
+    }
 
     public void callSignUpScreen(View view) {
             Intent intent = new Intent(LoginActivity.this, SignUpActivity.class);
@@ -154,4 +168,3 @@ public class LoginActivity extends AppCompatActivity {
             startActivity(intent, options.toBundle());
         }
   }
-
