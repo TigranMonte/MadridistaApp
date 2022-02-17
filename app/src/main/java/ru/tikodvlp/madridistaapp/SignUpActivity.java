@@ -127,9 +127,9 @@ public class SignUpActivity extends AppCompatActivity {
 
         Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
         intent.putExtra("email", email);
-        //intent.putExtra("username", name);
+        intent.putExtra("username", name);
         intent.putExtra("password", password);
-        //intent.putExtra("username", username);
+        intent.putExtra("username", username);
         startActivity(intent);
 
         Toast.makeText(this, "New user created successfully! Enter your data to Login",

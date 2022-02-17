@@ -20,6 +20,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import ru.tikodvlp.madridistaapp.quiz.StartingScreenQuizActivity;
+import ru.tikodvlp.madridistaapp.support.RealMadridWebActivity;
 
 public class UserProfileActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -144,6 +145,10 @@ public class UserProfileActivity extends AppCompatActivity implements Navigation
                 break;
             case R.id.nav_quiz:
                 intent = new Intent(UserProfileActivity.this, StartingScreenQuizActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.webCommunity:
+                intent = new Intent(UserProfileActivity.this, RealMadridWebActivity.class);
                 startActivity(intent);
                 break;
         }

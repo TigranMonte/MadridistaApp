@@ -30,10 +30,14 @@
     <string name="user_profile">User Profile</string>
     <string name="club_info">We are Real Madrid</string>
     <string name="team_info">Our team</string>
+    <string name="hala_madrid">¡Hala Madrid!</string>
+    <string name="visit_website">Want to join to Madridista family? Visit official website and request your card</string>
+    <string name="visit_news">Stay up to date with the latest news</string>
+    <string name="visit_social_media">Keep in touch with Real Madrid social media</string>
     <string name="quiz">Real Madrid Quiz</string>
     <string name="music">Real Madrid anthem</string>
     <string name="support">Support</string>
-    <string name="become_madridista">Become madridista</string>
+    <string name="real_madrid_web">Real Madrid Web Community</string>
     <string name="feedback">Give us a feedback</string>
     <string name="slogan">Hasta el Final Vamos Real!</string>
     <string name="nav_open_drawer">Open navigation drawer</string>

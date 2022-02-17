@@ -27,8 +27,8 @@
         <item android:title="@string/support">
             <menu>
                 <item
-                    android:id="@+id/becomeMadridista"
-                    android:title="@string/become_madridista"
+                    android:id="@+id/webCommunity"
+                    android:title="@string/real_madrid_web"
                     android:icon="@drawable/ic_baseline_card_membership_24"/>
                 <item
                     android:id="@+id/feedback"
