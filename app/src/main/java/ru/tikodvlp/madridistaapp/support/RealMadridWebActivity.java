@@ -28,7 +28,7 @@ public class RealMadridWebActivity extends AppCompatActivity {
         tvVisitNews = findViewById(R.id.tvVisitNews);
         tvVisitWebSite = findViewById(R.id.tvVisitWebsite);
         tvVisitSocialMedia = findViewById(R.id.tvVisitSocialMedia);
-        //tvHalaMadrid = findViewById(R.id.tvHalaMadrid);
+        tvHalaMadrid = findViewById(R.id.tvHalaMadrid);
         btnVisitNews = findViewById(R.id.btnVisitNews);
         btnVisitWebSite = findViewById(R.id.btnVisitWebsite);
         ivLogo = findViewById(R.id.ivLogo);
@@ -39,9 +39,23 @@ public class RealMadridWebActivity extends AppCompatActivity {
         toolbar = findViewById(R.id.toolbar);
 
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Real Madrid Global Community");
+        getSupportActionBar().setTitle("Real Madrid Web Community");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
+
+        btnVisitNews.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                goToUrl("https://www.marca.com/futbol/real-madrid.html?intcmp=MENUESCU&s_kw=realmadrid");
+            }
+        });
+
+        btnVisitWebSite.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                goToUrl("https://www.realmadrid.com/aficion/madridistas/internacionales");
+            }
+        });
 
         ivTwitter.setOnClickListener(new View.OnClickListener() {
             @Override

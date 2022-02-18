@@ -114,12 +114,13 @@
             android:freezesText="true"/>
     </RadioGroup>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button_confirm_next"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/confirm"
         android:textSize="15sp"
+        app:cornerRadius="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginTop="20dp"

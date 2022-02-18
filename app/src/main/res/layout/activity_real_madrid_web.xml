@@ -1,23 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/blue"
     tools:context=".support.RealMadridWebActivity">
-    <include
-        android:id="@+id/toolbar"
-        layout="@layout/toolbar_main" />
-    <ScrollView
-        android:id="@+id/scrollView2"
-        android:layout_width="0dp"
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintLeft_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:orientation="vertical">
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar_main" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -32,18 +30,19 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="cursive"
                 android:gravity="center"
-                android:paddingTop="16dp"
+                android:paddingTop="10dp"
                 android:text="@string/hala_madrid"
                 android:textColor="@color/white_2"
-                android:textSize="40sp"
+                android:textSize="30sp"
                 app:layout_constraintBottom_toTopOf="@+id/ivLogo"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
                 android:id="@+id/ivLogo"
-                android:layout_width="200dp"
-                android:layout_height="200dp"
+                android:layout_width="1500dp"
+                android:layout_height="150dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="56dp"
                 android:contentDescription="TODO"
@@ -158,5 +157,5 @@
                 app:layout_constraintStart_toEndOf="@+id/ivInstagram"
                 app:layout_constraintTop_toBottomOf="@+id/tvVisitSocialMedia" />
         </androidx.constraintlayout.widget.ConstraintLayout>
-    </ScrollView>
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</ScrollView>
