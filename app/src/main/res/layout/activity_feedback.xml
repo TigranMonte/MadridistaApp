@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".support.FeedbackActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_main" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/editTextName"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+
+        android:hint="@string/full_name">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/editTextFeedback"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextName"
+        android:layout_marginTop="20dp"
+        android:hint="@string/feedback_hint">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="200dp"
+            android:gravity="top"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSendFeedback"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextFeedback"
+        android:layout_marginTop="20dp"
+        app:cornerRadius="20dp"
+        android:text="@string/send_feedback"/>
+
+        <ImageView
+            android:id="@+id/ivLogo"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/logo_bw"
+            android:layout_below="@+id/btnSendFeedback"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/tvFeedbackThankU"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivLogo"
+            android:text="@string/feedback_thank_you"/>
+
+    </RelativeLayout>
+</RelativeLayout>

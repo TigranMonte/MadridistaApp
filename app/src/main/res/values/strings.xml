@@ -7,6 +7,8 @@
     <string name="signIn">Sign In to continue</string>
     <string name="signUp">Sign Up to start</string>
     <string name="username_hint">Username</string>
+    <string name="feedback_hint">Feedback</string>
+    <string name="send_feedback">Send Feedback</string>
     <string name="reset_password">Reset Password</string>
     <string name="password_hint">Password</string>
     <string name="phone_hint">Phone number</string>
@@ -56,4 +58,5 @@
     <string name="option1_2">1902</string>
     <string name="option1_3">1900</string>
     <string name="option1_4">1905</string>
+    <string name="feedback_thank_you">Thank you for your feedback!</string>
 </resources>

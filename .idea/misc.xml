@@ -7,6 +7,7 @@
         <entry key="app/src/main/res/drawable/ic_madridlogo.xml" value="0.25104166666666666" />
         <entry key="app/src/main/res/drawable/ic_music.xml" value="0.26153846153846155" />
         <entry key="app/src/main/res/layout/activity_audio.xml" value="0.2164855072463768" />
+        <entry key="app/src/main/res/layout/activity_feedback.xml" value="0.23369565217391305" />
         <entry key="app/src/main/res/layout/activity_forgot_password.xml" value="0.2427536231884058" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
