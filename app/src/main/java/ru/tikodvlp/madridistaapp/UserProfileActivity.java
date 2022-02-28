@@ -20,6 +20,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import ru.tikodvlp.madridistaapp.quiz.StartingScreenQuizActivity;
+import ru.tikodvlp.madridistaapp.support.FeedbackActivity;
 import ru.tikodvlp.madridistaapp.support.RealMadridWebActivity;
 
 public class UserProfileActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -117,8 +118,6 @@ public class UserProfileActivity extends AppCompatActivity implements Navigation
         }
     }
 
-
-
     @Override
     public void onBackPressed() {
         if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
@@ -130,7 +129,6 @@ public class UserProfileActivity extends AppCompatActivity implements Navigation
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-
         Intent intent = null;
         switch (item.getItemId()) {
             case R.id.nav_user_profile:
@@ -149,6 +147,10 @@ public class UserProfileActivity extends AppCompatActivity implements Navigation
                 break;
             case R.id.webCommunity:
                 intent = new Intent(UserProfileActivity.this, RealMadridWebActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.feedback:
+                intent = new Intent(UserProfileActivity.this, FeedbackActivity.class);
                 startActivity(intent);
                 break;
         }

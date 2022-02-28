@@ -46,14 +46,14 @@
             android:inputType="text" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnSendFeedback"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/editTextFeedback"
-        android:layout_marginTop="20dp"
-        app:cornerRadius="20dp"
-        android:text="@string/send_feedback"/>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSendFeedback"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editTextFeedback"
+            android:layout_marginTop="20dp"
+            android:text="@string/send_feedback"
+            app:cornerRadius="20dp" />
 
         <ImageView
             android:id="@+id/ivLogo"
@@ -61,7 +61,7 @@
             android:layout_height="150dp"
             android:src="@drawable/logo_bw"
             android:layout_below="@+id/btnSendFeedback"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:layout_centerHorizontal="true"/>
 
         <TextView
@@ -69,7 +69,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/ivLogo"
-            android:text="@string/feedback_thank_you"/>
+            android:text="@string/feedback_thank_you"
+            android:gravity="center"
+            android:textColor="@color/blue"
+            android:textStyle="bold"/>
 
     </RelativeLayout>
 </RelativeLayout>
