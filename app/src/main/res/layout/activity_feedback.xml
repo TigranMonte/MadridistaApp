@@ -21,7 +21,7 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="50dp"
 
         android:hint="@string/full_name">
         <com.google.android.material.textfield.TextInputEditText
@@ -61,7 +61,7 @@
             android:layout_height="150dp"
             android:src="@drawable/logo_bw"
             android:layout_below="@+id/btnSendFeedback"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="16dp"
             android:layout_centerHorizontal="true"/>
 
         <TextView
@@ -72,7 +72,8 @@
             android:text="@string/feedback_thank_you"
             android:gravity="center"
             android:textColor="@color/blue"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"/>
 
     </RelativeLayout>
 </RelativeLayout>
