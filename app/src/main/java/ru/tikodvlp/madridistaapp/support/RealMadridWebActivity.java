@@ -10,6 +10,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 import ru.tikodvlp.madridistaapp.R;
 
 public class RealMadridWebActivity extends AppCompatActivity {
