@@ -25,6 +25,10 @@ import ru.tikodvlp.madridistaapp.support.RealMadridWebActivity;
 
 public class UserProfileActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
+    private static final String EXTRA_SHARE_LINK = "Your application link is here...";
+    private static final String EXTRA_SHARE_SUBJECT = "Check out this application for Real Madrid supporters";
+    private static final String EXTRA_SHARE_TITLE = "Share Via";
+
     TextInputLayout fullName, email, password;
     TextView fullNameLabel, usernameLabel;
 
@@ -153,6 +157,12 @@ public class UserProfileActivity extends AppCompatActivity implements Navigation
                 intent = new Intent(UserProfileActivity.this, FeedbackActivity.class);
                 startActivity(intent);
                 break;
+            case R.id.share:
+                intent = new Intent(Intent.ACTION_SEND);
+                intent.setType("text/plain");
+                intent.putExtra(Intent.EXTRA_SUBJECT, EXTRA_SHARE_SUBJECT);
+                intent.putExtra(Intent.EXTRA_TEXT, EXTRA_SHARE_LINK);
+                startActivity(Intent.createChooser(intent, EXTRA_SHARE_TITLE));
         }
         return true;
     }
