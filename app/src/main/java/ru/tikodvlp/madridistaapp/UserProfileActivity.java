@@ -163,6 +163,11 @@ public class UserProfileActivity extends AppCompatActivity implements Navigation
                 intent.putExtra(Intent.EXTRA_SUBJECT, EXTRA_SHARE_SUBJECT);
                 intent.putExtra(Intent.EXTRA_TEXT, EXTRA_SHARE_LINK);
                 startActivity(Intent.createChooser(intent, EXTRA_SHARE_TITLE));
+            case R.id.logOut:
+                intent = new Intent(UserProfileActivity.this, LoginActivity.class);
+                startActivity(intent);
+                finish();
+                break;
         }
         return true;
     }
