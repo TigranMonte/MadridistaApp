@@ -50,14 +50,12 @@ public class RealMadridWebActivity extends AppCompatActivity {
                 goToUrl("https://www.marca.com/futbol/real-madrid.html?intcmp=MENUESCU&s_kw=realmadrid");
             }
         });
-
         btnVisitWebSite.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 goToUrl("https://www.realmadrid.com/aficion/madridistas/internacionales");
             }
         });
-
         ivTwitter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -77,11 +75,11 @@ public class RealMadridWebActivity extends AppCompatActivity {
             }
         });
     }
+
     private void goToUrl(String s){
         Uri uri = Uri.parse(s);
         startActivity(new Intent(Intent.ACTION_VIEW, uri));
     }
-
     @Override
     public boolean onSupportNavigateUp() {
         onBackPressed();

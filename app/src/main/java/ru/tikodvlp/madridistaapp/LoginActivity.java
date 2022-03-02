@@ -76,6 +76,7 @@ public class LoginActivity extends AppCompatActivity {
                 return true;
             }
         }
+
     public void loginUser(View view) {
             // validate Login info
             if (!validateUsername() | !validatePassword()) {
@@ -140,6 +141,7 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
     }
+
     public void callForgotPassword(View view) {
         Intent intent = new Intent(LoginActivity.this, ForgotPasswordActivity.class);
         Pair[] pairs = new Pair[5];
