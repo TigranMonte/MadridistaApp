@@ -113,16 +113,17 @@
 
         </LinearLayout>
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btnEnter"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/blue"
             android:onClick="registerUser"
             android:text="@string/sign_up_reg"
-            android:transitionName="enter_tran" />
+            android:transitionName="enter_tran"
+            app:cornerRadius="20dp"/>
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btnToLogIn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -130,6 +131,7 @@
             android:text="@string/already"
             android:onClick="callLoginActivity"
             android:textSize="15sp"
-            android:transitionName="sign_tran" />
+            android:transitionName="sign_tran"
+            app:cornerRadius="20dp"/>
     </LinearLayout>
 </ScrollView>

@@ -55,7 +55,9 @@
             android:transitionName="user_tran">
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:inputType="text"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -70,23 +72,25 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:maxLines="1"
                 android:inputType="textPassword"
                 android:transitionName="pass_tran"/>
         </com.google.android.material.textfield.TextInputLayout>
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btnForgotPassword"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/transparent"
+            android:background="@color/transparent"
             android:textColor="@color/blue"
             android:textStyle="bold"
             android:onClick="callForgotPassword"
             android:text="@string/forgot_password"
             android:layout_gravity="end"
             android:elevation="0dp"
-            android:layout_margin="5dp"/>
-        <Button
+            android:layout_margin="5dp"
+            app:cornerRadius="20dp"/>
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btnEnterLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -95,20 +99,21 @@
             android:backgroundTint="@color/blue"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
-            android:transitionName="enter_tran"/>
-        <Button
+            android:transitionName="enter_tran"
+            app:cornerRadius="20dp"/>
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/signUpScreen"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/transparent"
-            android:textColor="@color/blue"
-            android:textStyle="bold"
+            android:textColor="@color/white"
             android:text="@string/new_user"
             android:onClick="callSignUpScreen"
             android:layout_gravity="end"
             android:elevation="0dp"
-            android:layout_margin="5dp"
-            android:transitionName="sign_tran"/>
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:transitionName="sign_tran"
+            app:cornerRadius="20dp"/>
 
         <ProgressBar
             android:id="@+id/progressBar"
