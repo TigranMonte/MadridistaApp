@@ -12,7 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MadridistaApp">
         <activity
-            android:name=".support.BrowserActivity"
+            android:name=".support.FeedbackActivity"
+            android:exported="false" />
+        <activity
+            android:name=".support.RealMadridWebActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
@@ -21,13 +24,6 @@
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
             </intent-filter>
-        </activity>
-        <activity
-            android:name=".support.FeedbackActivity"
-            android:exported="false" />
-        <activity
-            android:name=".support.RealMadridWebActivity"
-            android:exported="false">
         </activity>
         <activity
             android:name=".ForgotPasswordActivity"
