@@ -57,50 +57,33 @@ public class ForgotPasswordActivity extends AppCompatActivity {
         });
     }
 
-    private Boolean validateEmail(){
-        String val = enterEmail.getEditText().getText().toString();
-        String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
-        if (val.isEmpty()) {
-            enterEmail.setError("Field cannot be empty");
-            return false;
-        } else if (!val.matches(emailPattern)) {
-            enterEmail.setError("Invalid email address");
-            return false;
-        }
-        else {
-            enterEmail.setError(null);
-            return true;
-        }
-    }
 
     private void resetPassword() {
 
-        if (!validateEmail()) {
+        String email = enterEmail.getEditText().getText().toString().trim();
+
+        if (email.isEmpty()) {
+            enterEmail.setError("Email is required!");
+            enterEmail.requestFocus();
             return;
         }
-        String email = enterEmail.getEditText().getText().toString().trim();
-        progressBar.setVisibility(View.GONE);
+
+        if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+            enterEmail.setError("Please provide valid email!");
+            enterEmail.requestFocus();
+            return;
+        }
+        progressBar.setVisibility(View.VISIBLE);
         auth.sendPasswordResetEmail(email).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 if (task.isSuccessful()){
                     Toast.makeText(ForgotPasswordActivity.this, "Check your email to reset your password",
                             Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
-                    startActivity(intent);
-                    progressBar.setVisibility(View.VISIBLE);
-                    finish();
-
                 } else {
                     Toast.makeText(ForgotPasswordActivity.this, "Try again later", Toast.LENGTH_SHORT).show();
                     progressBar.setVisibility(View.GONE);
                 }
-            }
-        }).addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(@NonNull Exception e) {
-                Toast.makeText(ForgotPasswordActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
-                progressBar.setVisibility(View.GONE);
             }
         });
     }
