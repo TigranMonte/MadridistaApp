@@ -3,6 +3,7 @@
     <string name="welcome">Welcome,</string>
     <string name="welcome_2">Welcome</string>
     <string name="madridista">madridista</string>
+    <string name="lets_get_started">Lets get started</string>
     <string name="hello">Hello there!</string>
     <string name="signIn">Sign In to continue</string>
     <string name="signUp">Sign Up to start</string>
@@ -14,6 +15,7 @@
     <string name="phone_hint">Phone number</string>
     <string name="forgot_password">Forgot password?</string>
     <string name="enter">Enter</string>
+    <string name="next">Next</string>
     <string name="sign_up_reg">Sign Up</string>
     <string name="logout">Log out</string>
     <string name="new_user">New User? Sign Up</string>

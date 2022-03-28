@@ -14,6 +14,8 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import ru.tikodvlp.madridistaapp.login_signup.LoginActivity;
+
 public class SplashActivity extends AppCompatActivity {
 
     public static final int SPLASH_SCREEN = 3000;
