@@ -41,25 +41,19 @@ public class SplashActivity extends AppCompatActivity {
         tvWelcome.setAnimation(topAnimation);
         tvMadridista.setAnimation(topAnimation);
 
-        new Handler().postDelayed(() -> {
-            Intent intent = new Intent(getApplicationContext(), OnBoarding.class);
-            startActivity(intent);
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                Intent intent = new Intent(SplashActivity.this, LoginActivity.class);
+                Pair[] pairs = new Pair[2];
+                pairs[0] = new Pair<View, String>(ivLogo, "logo_image");
+                pairs[1] = new Pair<View, String>(tvWelcome, "logo_text");
+
+                ActivityOptions options = ActivityOptions.
+                        makeSceneTransitionAnimation(SplashActivity.this, pairs);
+                startActivity(intent, options.toBundle());
             finish();
-        }, SPLASH_SCREEN);
-
-        //new Handler().postDelayed(new Runnable() {
-            //@Override
-            //public void run() {
-                //Intent intent = new Intent(SplashActivity.this, OnBoarding.class);
-                //Pair[] pairs = new Pair[2];
-                //pairs[0] = new Pair<View, String>(ivLogo, "logo_image");
-                //pairs[1] = new Pair<View, String>(tvWelcome, "logo_text");
-
-                //ActivityOptions options = ActivityOptions.
-                        //makeSceneTransitionAnimation(SplashActivity.this, pairs);
-                //startActivity(intent, options.toBundle());
-            //finish();
-            //}
-        //},SPLASH_SCREEN);
+            }
+        },SPLASH_SCREEN);
     }
 }

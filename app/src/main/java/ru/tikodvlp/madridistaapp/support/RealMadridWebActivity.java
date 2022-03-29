@@ -40,7 +40,7 @@ public class RealMadridWebActivity extends AppCompatActivity {
         toolbar = findViewById(R.id.toolbar);
 
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Real Madrid Web Community");
+        getSupportActionBar().setTitle("Web Community");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 

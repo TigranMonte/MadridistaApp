@@ -12,9 +12,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MadridistaApp" >
         <activity
-            android:name=".HelperClasses.OnBoarding"
-            android:exported="false" />
-        <activity
             android:name=".support.FeedbackActivity"
             android:exported="false" />
         <activity
