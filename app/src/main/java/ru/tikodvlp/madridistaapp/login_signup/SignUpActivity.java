@@ -14,7 +14,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import ru.tikodvlp.madridistaapp.R;
-import ru.tikodvlp.madridistaapp.UserHelperClass;
+import ru.tikodvlp.madridistaapp.HelperClasses.UserHelperClass;
 
 public class SignUpActivity extends AppCompatActivity {
 

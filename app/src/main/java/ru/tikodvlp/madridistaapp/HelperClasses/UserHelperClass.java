@@ -1,4 +1,4 @@
-package ru.tikodvlp.madridistaapp;
+package ru.tikodvlp.madridistaapp.HelperClasses;
 
 public class UserHelperClass {
 

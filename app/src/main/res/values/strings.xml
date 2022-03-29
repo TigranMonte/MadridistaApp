@@ -16,6 +16,10 @@
     <string name="forgot_password">Forgot password?</string>
     <string name="enter">Enter</string>
     <string name="next">Next</string>
+    <string name="heading1">Madridista app</string>
+    <string name="heading2">Enjoy being Madridista</string>
+    <string name="first_slide_desc">This application was created for the convenience of all Real Madrid fans. Our goal is to keep up to date with the latest news and expand our large Madridista family around the world</string>
+    <string name="second_slide_desc">Support our club with us, enjoy best moments and become a true Madridista</string>
     <string name="sign_up_reg">Sign Up</string>
     <string name="logout">Log out</string>
     <string name="new_user">New User? Sign Up</string>
